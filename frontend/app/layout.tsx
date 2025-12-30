@@ -3,6 +3,7 @@ import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { RealPrivyProvider } from "@/components/real-privy-provider";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -10,15 +11,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skal Ventures",
-  description: "Investment strategies that outperform the market",
-  generator: 'v0.app',
-  manifest: '/manifest.json',
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'default',
-    title: 'Skal Ventures',
-  },
+  title: "Payperdo",
+  description: "Complete simple tasks and get paid instantly via x402",
+  generator: 'v0.app'
 };
 
 export default function RootLayout({
@@ -38,8 +33,10 @@ export default function RootLayout({
         className={`${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Header />
-        {children}
+        <RealPrivyProvider>
+          <Header />
+          {children}
+        </RealPrivyProvider>
       </body>
     </html>
   );
