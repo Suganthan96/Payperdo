@@ -59,6 +59,7 @@
     "lucide-react": "^0.454.0",
     "maath": "latest",
     "next": "16.1.1",
+    "next-pwa": "^5.6.0",
     "next-themes": "latest",
     "path": "latest",
     "r3f-perf": "latest",

@@ -12,7 +12,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Skal Ventures",
   description: "Investment strategies that outperform the market",
-    generator: 'v0.app'
+  generator: 'v0.app',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Skal Ventures',
+  },
 };
 
 export default function RootLayout({
@@ -22,6 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+      </head>
       <body
         className={`${geistMono.variable} antialiased`}
         suppressHydrationWarning
