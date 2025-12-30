@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Header } from "@/components/header";
 import { RealPrivyProvider } from "@/components/real-privy-provider";
 
 const geistMono = Geist_Mono({
@@ -34,7 +33,6 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <RealPrivyProvider>
-          <Header />
           {children}
         </RealPrivyProvider>
       </body>
