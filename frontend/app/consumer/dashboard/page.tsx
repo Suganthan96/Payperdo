@@ -45,14 +45,14 @@ export default function ConsumerDashboard() {
     },
     {
       label: "Browse Tasks",
-      href: "#",
+      href: "/consumer/Tasks",
       icon: (
         <IconList className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
       label: "My Earnings",
-      href: "#",
+      href: "/consumer/Earning",
       icon: (
         <IconCoin className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
