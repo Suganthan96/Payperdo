@@ -36,7 +36,30 @@ export function RealPrivyProvider({ children }: PrivyClientProviderProps) {
         
         // Additional chains (Movement blockchain)
         supportedChains: [
-          // Default to Ethereum mainnet for now, Movement testnet will be added later
+          // Movement Testnet Configuration
+          {
+            id: 250,
+            name: 'Movement Testnet',
+            network: 'movement-testnet',
+            nativeCurrency: { 
+              name: 'Movement', 
+              symbol: 'MOV', 
+              decimals: 8 // Movement uses 8 decimals like Bitcoin
+            },
+            rpcUrls: {
+              default: { 
+                http: ['https://testnet.movementnetwork.xyz/v1'] 
+              }
+            },
+            blockExplorers: {
+              default: { 
+                name: 'Movement Explorer', 
+                url: 'https://explorer.movementnetwork.xyz/?network=bardock+testnet' 
+              }
+            },
+            testnet: true
+          },
+          // Keep Ethereum for fallback
           {
             id: 1,
             name: 'Ethereum',

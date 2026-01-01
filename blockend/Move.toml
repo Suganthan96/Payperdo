@@ -1,0 +1,15 @@
+[package]
+name = "Payperdo"
+version = "1.0.0"
+authors = ["Payperdo Team"]
+
+[addresses]
+payperdo = "0x33ff76ffa94bfd2efb07d79e3830dbf46fdb30bdc0596374e88a72a0b49751d9"
+
+[dev-addresses]
+payperdo = "0x33ff76ffa94bfd2efb07d79e3830dbf46fdb30bdc0596374e88a72a0b49751d9"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "aptos-cli-v3.5.0"
+subdir = "aptos-move/framework/aptos-framework"

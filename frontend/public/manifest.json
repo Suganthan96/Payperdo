@@ -1,7 +1,7 @@
 {
-  "name": "Skal Ventures",
-  "short_name": "Skal",
-  "description": "Investment strategies that outperform the market",
+  "name": "Payperdo - Task Management Platform",
+  "short_name": "Payperdo",
+  "description": "Decentralized task management platform with MOV token rewards",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

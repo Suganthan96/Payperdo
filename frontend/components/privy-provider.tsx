@@ -1,23 +1,13 @@
 'use client'
 
 import React from 'react'
-// TODO: Uncomment when you install: npm install @privy-io/react-auth
-// import { PrivyProvider } from '@privy-io/react-auth'
+import { PrivyProvider } from '@privy-io/react-auth'
 
 interface PrivyClientProviderProps {
   children: React.ReactNode
 }
 
 export function PrivyClientProvider({ children }: PrivyClientProviderProps) {
-  // Temporary wrapper - replace with PrivyProvider after installing package
-  return (
-    <>
-      {children}
-    </>
-  )
-  
-  /* 
-  // Uncomment this after running: npm install @privy-io/react-auth
   return (
     <PrivyProvider
       appId="cmjslk54v00tlk00d3ntez04k" // Your actual Privy App ID
@@ -40,18 +30,36 @@ export function PrivyClientProvider({ children }: PrivyClientProviderProps) {
         
         // Legal configuration
         legal: {
-          terms: 'https://payperdo.com/terms',
-          privacy: 'https://payperdo.com/privacy',
+          termsAndConditionsUrl: 'https://payperdo.com/terms',
+          privacyPolicyUrl: 'https://payperdo.com/privacy',
         },
         
-        // Additional chains (you'll add Movement chain here later)
+        // Movement Network Configuration (Chain ID: 250)
         supportedChains: [
-          // Will add Movement testnet configuration here
+          {
+            id: 250,
+            name: 'Movement Testnet',
+            network: 'movement-testnet',
+            nativeCurrency: { 
+              name: 'Movement', 
+              symbol: 'MOV', 
+              decimals: 8 
+            },
+            rpcUrls: {
+              default: { http: ['https://testnet.movementnetwork.xyz/v1'] }
+            },
+            blockExplorers: {
+              default: { 
+                name: 'Movement Explorer', 
+                url: 'https://explorer.movementnetwork.xyz/?network=bardock+testnet' 
+              }
+            },
+            testnet: true
+          }
         ],
       }}
     >
       {children}
     </PrivyProvider>
   )
-  */
 }
